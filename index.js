@@ -20,12 +20,12 @@ app.use("/api",tambolaRoutes)
 
 
 
-app.listen(4500, async () => {
+app.listen(4000, async () => {
   try {
     await connection;
     console.log("Db connected");
   } catch (err) {
     console.log(err.message);
   }
-  console.log("http://localhost:4500/");
+  console.log("http://localhost:4000/");
 });
