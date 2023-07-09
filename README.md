@@ -1,4 +1,5 @@
 ##Tambola-Ticket-Api
+
 This is a Node.js application that serves as an API for generating tambola tickets.
 
 Prerequisites
