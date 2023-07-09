@@ -4,14 +4,14 @@ const tambolaTicketSchema = new mongoose.Schema({
   ticket_id: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'ticket',
-    required: true
+    required: true,
   },
   value: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 });
 
 const TambolaTicketModel = mongoose.model('tambolaTicket', tambolaTicketSchema);
 
-module.exports ={ TambolaTicketModel}
+module.exports = { TambolaTicketModel };

@@ -1,31 +1,21 @@
-const express = require("express");
-const {connection}= require("./config/db")
-const {userRoute}=require("./routes/User.routes")
-const {authMiddleware}=require("./middleware/auth");
-const { tambolaRoutes } = require("./routes/ticket.routes");
-const app = express()
-
+const express = require('express');
+const { connection } = require('./config/db');
+const { userRoute } = require('./routes/userrouter');
+const { ticketRoute } = require('./routes/ticketrouter');
+const app = express();
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Welcome to Tambola Ticket Server");
+app.get('/', (req, res) => {
+  res.send('Welcome to Tambola Ticket Server');
 });
-
-app.use("/api", userRoute);
-
-app.use(authMiddleware)
-
-app.use("/api",tambolaRoutes)
-
-
-
-
-app.listen(4000, async () => {
+app.use('/api/auth', userRoute);
+app.use('/api/ticket', ticketRoute);
+app.listen(3000, async () => {
   try {
     await connection;
-    console.log("Db connected");
+    console.log('Db connected');
   } catch (err) {
     console.log(err.message);
   }
-  console.log("http://localhost:4000/");
+  console.log('http://localhost:3000/');
 });
