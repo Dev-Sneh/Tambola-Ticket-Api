@@ -11,21 +11,13 @@ Getting Started
 To get started with the Tambola-Ticket-Api, follow these steps:
 
 Clone the repository:
-
-bash
 git clone https://github.com/Dev-Sneh/Tambola-Ticket-Api.git
 Navigate to the project directory:
-
-bash
 cd Tambola-Ticket-Api
 Install the dependencies:
-
-bash
 npm install
 Rename the .env.example file to .env and update the configuration values if needed.
 
 Start the server:
-
-bash
 npm start
 The API will now be running at http://localhost:3000.
